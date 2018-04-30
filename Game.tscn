@@ -1,0 +1,325 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Game.gd" type="Script" id=1]
+[ext_resource path="res://server/server-bg.png" type="Texture" id=2]
+[ext_resource path="res://server/Server.tscn" type="PackedScene" id=3]
+[ext_resource path="res://server/assets/ram.png" type="Texture" id=4]
+[ext_resource path="res://server/assets/ram-hover.png" type="Texture" id=5]
+[ext_resource path="res://server/UpgradeButton.gd" type="Script" id=6]
+[ext_resource path="res://server/assets/server.png" type="Texture" id=7]
+[ext_resource path="res://server/ServerButton.gd" type="Script" id=8]
+[ext_resource path="res://server/assets/streamer.png" type="Texture" id=9]
+[ext_resource path="res://server/assets/streamer-hover.png" type="Texture" id=10]
+[ext_resource path="res://server/StreamerButton.gd" type="Script" id=11]
+[ext_resource path="res://clock/Clock.tscn" type="PackedScene" id=12]
+
+[node name="Game" type="Node" index="0"]
+
+script = ExtResource( 1 )
+money = 1000
+
+[node name="MoneyTimer" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 5.0
+one_shot = false
+autostart = true
+
+[node name="server-bg" type="Sprite" parent="." index="1"]
+
+position = Vector2( 627, 466 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Servers" type="Node" parent="." index="2"]
+
+editor/display_folded = true
+
+[node name="Server" parent="Servers" index="0" instance=ExtResource( 3 )]
+
+margin_left = 197.0
+margin_top = 80.0
+margin_right = 325.0
+margin_bottom = 121.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server2" parent="Servers" index="1" instance=ExtResource( 3 )]
+
+margin_left = 197.0
+margin_top = 174.0
+margin_right = 325.0
+margin_bottom = 215.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server3" parent="Servers" index="2" instance=ExtResource( 3 )]
+
+margin_left = 197.0
+margin_top = 268.0
+margin_right = 325.0
+margin_bottom = 309.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server4" parent="Servers" index="3" instance=ExtResource( 3 )]
+
+margin_left = 197.0
+margin_top = 362.0
+margin_right = 325.0
+margin_bottom = 403.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server5" parent="Servers" index="4" instance=ExtResource( 3 )]
+
+margin_left = 197.0
+margin_top = 456.0
+margin_right = 325.0
+margin_bottom = 497.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server6" parent="Servers" index="5" instance=ExtResource( 3 )]
+
+margin_left = 197.0
+margin_top = 550.0
+margin_right = 325.0
+margin_bottom = 591.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server7" parent="Servers" index="6" instance=ExtResource( 3 )]
+
+margin_left = 473.0
+margin_top = 80.0
+margin_right = 601.0
+margin_bottom = 121.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server8" parent="Servers" index="7" instance=ExtResource( 3 )]
+
+margin_left = 473.0
+margin_top = 174.0
+margin_right = 601.0
+margin_bottom = 215.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server9" parent="Servers" index="8" instance=ExtResource( 3 )]
+
+margin_left = 473.0
+margin_top = 268.0
+margin_right = 601.0
+margin_bottom = 309.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server10" parent="Servers" index="9" instance=ExtResource( 3 )]
+
+margin_left = 473.0
+margin_top = 362.0
+margin_right = 601.0
+margin_bottom = 403.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server11" parent="Servers" index="10" instance=ExtResource( 3 )]
+
+margin_left = 473.0
+margin_top = 456.0
+margin_right = 601.0
+margin_bottom = 497.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server12" parent="Servers" index="11" instance=ExtResource( 3 )]
+
+margin_left = 473.0
+margin_top = 550.0
+margin_right = 601.0
+margin_bottom = 591.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server13" parent="Servers" index="12" instance=ExtResource( 3 )]
+
+margin_left = 749.0
+margin_top = 80.0
+margin_right = 877.0
+margin_bottom = 121.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server14" parent="Servers" index="13" instance=ExtResource( 3 )]
+
+margin_left = 748.0
+margin_top = 174.0
+margin_right = 876.0
+margin_bottom = 215.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server15" parent="Servers" index="14" instance=ExtResource( 3 )]
+
+margin_left = 749.0
+margin_top = 268.0
+margin_right = 877.0
+margin_bottom = 309.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server16" parent="Servers" index="15" instance=ExtResource( 3 )]
+
+margin_left = 749.0
+margin_top = 362.0
+margin_right = 877.0
+margin_bottom = 403.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server17" parent="Servers" index="16" instance=ExtResource( 3 )]
+
+margin_left = 749.0
+margin_top = 456.0
+margin_right = 877.0
+margin_bottom = 497.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="Server18" parent="Servers" index="17" instance=ExtResource( 3 )]
+
+margin_left = 749.0
+margin_top = 550.0
+margin_right = 877.0
+margin_bottom = 591.0
+rect_scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Rect", "Transform", "Visibility" ]
+
+[node name="UpgradeButton" type="TextureButton" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 11.0
+margin_top = 268.0
+margin_right = 91.0
+margin_bottom = 348.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+script = ExtResource( 6 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="ServerButton" type="TextureButton" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 21.0
+margin_top = 460.0
+margin_right = 149.0
+margin_bottom = 501.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 7 )
+script = ExtResource( 8 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="StreamerButton" type="TextureButton" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 30.0
+margin_top = 140.0
+margin_right = 90.0
+margin_bottom = 200.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 10 )
+script = ExtResource( 11 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Clock" parent="." index="6" instance=ExtResource( 12 )]
+
+position = Vector2( 992, 33 )
+scale = Vector2( 0.187502, 0.1875 )
+
+[node name="Viewers" type="Label" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 178.0
+margin_right = 218.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Money" type="Label" parent="." index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 783.0
+margin_right = 874.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="timeout" from="MoneyTimer" to="." method="_on_MoneyTimer_timeout"]
+
+

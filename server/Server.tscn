@@ -1,0 +1,354 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://server/assets/server.png" type="Texture" id=1]
+[ext_resource path="res://server/Server.gd" type="Script" id=2]
+[ext_resource path="res://server/Button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://server/assets/Pixeled.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 5
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="Server" type="TextureRect"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 128.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 1 )
+stretch_mode = 0
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+capacity = 1000
+
+[node name="Buttons" type="Node2D" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 55, 9 )
+
+[node name="Button" parent="Buttons" index="0" instance=ExtResource( 3 )]
+
+color = 1
+
+[node name="Button2" parent="Buttons" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 7.5, 0 )
+color = 1
+
+[node name="Button3" parent="Buttons" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 14.5, 0 )
+color = 1
+
+[node name="Button4" parent="Buttons" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 21.5, 0 )
+color = 1
+
+[node name="Button5" parent="Buttons" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 28.5, 0 )
+color = 1
+
+[node name="Button6" parent="Buttons" index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 35.5, 0 )
+color = 1
+
+[node name="Button7" parent="Buttons" index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 42.5, 0 )
+color = 1
+
+[node name="Button8" parent="Buttons" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 49.5, 0 )
+color = 1
+
+[node name="Button9" parent="Buttons" index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 56.5, 0 )
+color = 1
+
+[node name="Button10" parent="Buttons" index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 63.5, 0 )
+color = 1
+
+[node name="Button11" parent="Buttons" index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 0, 7 )
+color = 2
+
+[node name="Button12" parent="Buttons" index="11" instance=ExtResource( 3 )]
+
+position = Vector2( 7.5, 7 )
+color = 2
+
+[node name="Button13" parent="Buttons" index="12" instance=ExtResource( 3 )]
+
+position = Vector2( 14.5, 7 )
+color = 2
+
+[node name="Button14" parent="Buttons" index="13" instance=ExtResource( 3 )]
+
+position = Vector2( 21.5, 7 )
+color = 2
+
+[node name="Button15" parent="Buttons" index="14" instance=ExtResource( 3 )]
+
+position = Vector2( 28.5, 7 )
+color = 2
+
+[node name="Button16" parent="Buttons" index="15" instance=ExtResource( 3 )]
+
+position = Vector2( 35.5, 7 )
+color = 2
+
+[node name="Button17" parent="Buttons" index="16" instance=ExtResource( 3 )]
+
+position = Vector2( 42.5, 7 )
+color = 2
+
+[node name="Button18" parent="Buttons" index="17" instance=ExtResource( 3 )]
+
+position = Vector2( 49.5, 7 )
+color = 2
+
+[node name="Button19" parent="Buttons" index="18" instance=ExtResource( 3 )]
+
+position = Vector2( 56.5, 7 )
+color = 2
+
+[node name="Button20" parent="Buttons" index="19" instance=ExtResource( 3 )]
+
+position = Vector2( 63.5, 7 )
+color = 2
+
+[node name="Button21" parent="Buttons" index="20" instance=ExtResource( 3 )]
+
+position = Vector2( 0, 14 )
+color = 3
+
+[node name="Button22" parent="Buttons" index="21" instance=ExtResource( 3 )]
+
+position = Vector2( 7.5, 14 )
+color = 3
+
+[node name="Button23" parent="Buttons" index="22" instance=ExtResource( 3 )]
+
+position = Vector2( 14.5, 14 )
+color = 3
+
+[node name="Button24" parent="Buttons" index="23" instance=ExtResource( 3 )]
+
+position = Vector2( 21.5, 14 )
+color = 3
+
+[node name="Button25" parent="Buttons" index="24" instance=ExtResource( 3 )]
+
+position = Vector2( 28.5, 14 )
+color = 3
+
+[node name="Button26" parent="Buttons" index="25" instance=ExtResource( 3 )]
+
+position = Vector2( 35.5, 14 )
+color = 3
+
+[node name="Button27" parent="Buttons" index="26" instance=ExtResource( 3 )]
+
+position = Vector2( 42.5, 14 )
+color = 3
+
+[node name="Button28" parent="Buttons" index="27" instance=ExtResource( 3 )]
+
+position = Vector2( 49.5, 14 )
+color = 3
+
+[node name="Button29" parent="Buttons" index="28" instance=ExtResource( 3 )]
+
+position = Vector2( 56.5, 14 )
+color = 3
+
+[node name="Button30" parent="Buttons" index="29" instance=ExtResource( 3 )]
+
+position = Vector2( 63.5, 14 )
+color = 3
+
+[node name="ViewerTimer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = false
+
+[node name="StreamerNumber" type="Label" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 2.0
+margin_right = 47.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.3125, 1, 0, 1 )
+text = "0"
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="ViewerNumber" type="Label" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 9.0
+margin_right = 47.0
+margin_bottom = 23.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.3125, 1, 0, 1 )
+text = "0"
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="CapacityNumber" type="Label" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 47.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.3125, 1, 0, 1 )
+text = "0"
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="StreamerLabel" type="Label" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 2.0
+margin_right = 48.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.3125, 1, 0, 1 )
+text = "str"
+align = 2
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="ViewerLabel" type="Label" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 9.0
+margin_right = 48.0
+margin_bottom = 23.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.3125, 1, 0, 1 )
+text = "vue"
+align = 2
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="CapacityLabel" type="Label" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 33.0
+margin_top = 16.0
+margin_right = 48.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.3125, 1, 0, 1 )
+text = "cap"
+align = 2
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[connection signal="mouse_exited" from="." to="." method="_on_Server_mouse_exited"]
+
+[connection signal="timeout" from="ViewerTimer" to="." method="_on_ViewerTimer_timeout"]
+
+
