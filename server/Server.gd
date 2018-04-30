@@ -25,6 +25,14 @@ func _change_state(new_state):
 		ON:
 			modulate = Color(1, 1, 1, 1)
 			$ViewerTimer.start()
+			$BlinkTimer.stop()
+			$Error.modulate = Color(1, 1, 1, 0)
+			$Texts.visible = true
+		BROKEN:
+			viewers = 0
+			streamer = 0
+			$BlinkTimer.start()
+			$Texts.visible = false
 
 	state = new_state
 	display_lights()
@@ -62,7 +70,7 @@ func _can_drop_upgrade():
 	if(state == NONE):
 		return false
 		
-	if(state == ON):
+	if(state == ON or state == BROKEN):
 		modulate = Color(0, 1, 0, 1)
 		return true
 		
@@ -100,6 +108,9 @@ func _drop_upgrade():
 	if(state == ON):
 		_add_capacity()
 		emit_signal("spend_money", 1000)
+	elif(state == BROKEN):
+		_change_state(STATES.ON)
+		emit_signal("spend_money", 1000)
 		
 func _drop_streamer():
 	if(state == ON):
@@ -112,7 +123,11 @@ func _add_streamer():
 	streamer += 1
 	
 func _on_Server_mouse_exited():
-	_change_state(state)
+	if state == NONE:
+		modulate = Color(1, 1, 1, 0)
+		return
+		
+	modulate = Color(1, 1, 1, 1)
 
 func format_number(number):
 	if(number < 1000):
@@ -125,11 +140,22 @@ func format_number(number):
 		return str(ceil(number/1000000000)) + "g"
 		
 func _process(delta):
-	$CapacityNumber.text = format_number(capacity)
-	$StreamerNumber.text = format_number(streamer)
-	$ViewerNumber.text = format_number(viewers)
+	$Texts/CapacityNumber.text = format_number(capacity)
+	$Texts/StreamerNumber.text = format_number(streamer)
+	$Texts/ViewerNumber.text = format_number(viewers)
 
 
 func _on_ViewerTimer_timeout():
 	viewers += streamer * 10
+	if(viewers > capacity):
+		_change_state(STATES.BROKEN)
+		return
+		
 	display_lights()
+
+
+func _on_BlinkTimer_timeout():
+	if($Error.modulate == Color(1, 1, 1, 0)):
+		$Error.modulate = Color(1, 1, 1, 1)
+	else:
+		$Error.modulate = Color(1, 1, 1, 0)

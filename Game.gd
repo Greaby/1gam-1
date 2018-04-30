@@ -3,6 +3,8 @@ extends Node
 var time = 0
 export (float) var money = 1000
 var objective = 500
+export (float) var objective_grow
+
 var viewers = 0
 
 func _ready():
@@ -32,4 +34,4 @@ func _on_MoneyTimer_timeout():
 	
 func _day_end():
 	money -= objective
-	objective += int(objective * 1.5)
+	objective += int(objective * objective_grow)
