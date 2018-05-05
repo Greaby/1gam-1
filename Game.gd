@@ -21,7 +21,7 @@ func _process(delta):
 
 func _spend_money(amount):
 	money -= amount
-	
+
 func update_viewers():
 	viewers = 0
 	for server in $Servers.get_children():
@@ -35,3 +35,7 @@ func _on_MoneyTimer_timeout():
 func _day_end():
 	money -= objective
 	objective += int(objective * objective_grow)
+	
+	if(money < 0):
+		get_tree().change_scene("res://GameOver.tscn")
+
