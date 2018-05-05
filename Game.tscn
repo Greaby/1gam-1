@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://server/server-bg.png" type="Texture" id=2]
@@ -14,8 +14,9 @@
 [ext_resource path="res://server/StreamerButton.gd" type="Script" id=12]
 [ext_resource path="res://clock/Clock.tscn" type="PackedScene" id=13]
 [ext_resource path="res://logo.png" type="Texture" id=14]
+[ext_resource path="res://assets/driving-home-chan-walrus.ogg" type="AudioStream" id=15]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 money = 1000
@@ -476,6 +477,14 @@ size_flags_vertical = 1
 texture = ExtResource( 14 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
+
+[node name="music" type="AudioStreamPlayer" parent="." index="16"]
+
+stream = ExtResource( 15 )
+volume_db = -15.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 [connection signal="timeout" from="MoneyTimer" to="." method="_on_MoneyTimer_timeout"]
 

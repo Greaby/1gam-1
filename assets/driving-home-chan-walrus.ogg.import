@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/driving-home-chan-walrus.ogg-cae3c6c9e7090ce91a9718747f83cacc.oggstr"
+
+[deps]
+
+source_file="res://assets/driving-home-chan-walrus.ogg"
+source_md5="ad95bc6c1792a6b88f9a2e1ee24e60ef"
+
+dest_files=[ "res://.import/driving-home-chan-walrus.ogg-cae3c6c9e7090ce91a9718747f83cacc.oggstr" ]
+dest_md5="b1cbd20ab16fd44e556f270a35e8a1d7"
+
+[params]
+
+loop=true
+loop_offset=0
