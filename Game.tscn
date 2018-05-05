@@ -15,7 +15,7 @@
 [ext_resource path="res://clock/Clock.tscn" type="PackedScene" id=13]
 [ext_resource path="res://logo.png" type="Texture" id=14]
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 script = ExtResource( 1 )
 money = 1000
