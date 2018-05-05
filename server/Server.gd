@@ -144,6 +144,11 @@ func _process(delta):
 	$Texts/CapacityNumber.text = format_number(capacity)
 	$Texts/StreamerNumber.text = format_number(streamer)
 	$Texts/ViewerNumber.text = format_number(viewers)
+	
+	
+	if state == STATES.BROKEN and Input.is_action_pressed("click"):
+		$Pop.play()
+		_change_state(STATES.ON)
 
 
 func _on_ViewerTimer_timeout():
@@ -158,5 +163,6 @@ func _on_ViewerTimer_timeout():
 func _on_BlinkTimer_timeout():
 	if($Error.modulate == Color(1, 1, 1, 0)):
 		$Error.modulate = Color(1, 1, 1, 1)
+		$Bang.play()
 	else:
 		$Error.modulate = Color(1, 1, 1, 0)
