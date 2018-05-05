@@ -90,6 +90,7 @@ func _can_drop_streamer():
 
 
 func drop_data(pos, data):
+	$Pop.play()
 	match data:
 		"server": 
 			return _drop_server()
