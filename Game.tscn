@@ -16,7 +16,7 @@
 [ext_resource path="res://logo.png" type="Texture" id=14]
 [ext_resource path="res://assets/driving-home-chan-walrus.ogg" type="AudioStream" id=15]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 money = 1000
